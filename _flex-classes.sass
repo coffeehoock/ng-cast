@@ -1,0 +1,63 @@
+.--wrap
+	padding: 0
+	margin: 0
+
+.df
+	display: flex
+
+@each $status, $w in $maps
+	.df-#{$status}
+		+col( $w )
+			display: flex
+
+.jcc
+	justify-content: center
+
+@each $status, $w in $maps
+	.jcc-#{$status}
+		+col( $w )
+			justify-content: center
+
+.aic
+	align-items: center
+
+@each $status, $w in $maps
+	.aic-#{$status}
+		+col( $w )
+			align-items: center
+
+.fd-col
+	flex-direction: column
+
+@each $status, $w in $maps
+	.fd-col-#{$status}
+		+col( $w )
+			flex-direction: column
+
+.fd-row
+	flex-direction: row
+
+@each $status, $w in $maps
+	.fd-row-#{$status}
+		+col( $w )
+			flex-direction: row
+
+.dfc
+	display: flex
+	justify-content: center
+	align-items: center
+
+@each $status, $w in $maps
+	.dfc-#{$status}
+		+col( $w )
+			display: flex
+			justify-content: center
+			align-items: center
+
+
+.tc
+	text-align: center
+
+.m-auto
+	margin-left:  auto
+	margin-right:  auto

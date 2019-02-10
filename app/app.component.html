@@ -1,0 +1,16 @@
+<header class="df jcc aic">
+  <nav class="page df jcc aic">
+      <nav  [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="under" routerLink="" class="pages__link">{{
+          'home' |
+          uppercase }}</nav>
+      <nav  routerLinkActive="under" routerLink="about" class="pages__link">{{ 'about' | uppercase }}</nav>
+      <nav  routerLinkActive="under" routerLink="galery" class="pages__link">{{ 'galery' | uppercase }}</nav>
+  </nav>
+</header>
+ <div class="container" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+   <router-outlet #o="outlet"></router-outlet>
+ </div>
+
+<div class="container" [@fadeAnimation]="state">
+    <router-outlet></router-outlet>
+</div>
